@@ -1,0 +1,13 @@
+.card-img {
+  height: 10em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg {
+  background-color: bisque;
+}
+
+.order {
+  min-height: fit-content;
+}

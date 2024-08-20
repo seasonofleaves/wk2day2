@@ -11,21 +11,151 @@
   <title>Ice Cream Parlor</title>
 </head>
 
-<body>
+<body class="bg">
   <main class="container-fluid">
-    <section class="row">
-      <div class="col-4 card"></div>
+    <section class="row m-3">
+      <div class="col-md-4">
 
-      <div></div>
+        <!-- NOTE - Order Tally -->
+
+        <div class="card order">
+          <div class="card-body">
+            <div class="card-title text-center fw-bold fs-4">
+              Order
+            </div>
+            <hr />
+            <div id="order" class="div"></div>
+            <hr />
+            <div>Total $<span id="total">0.00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <section class="row g-3 m-3 justify-content-around">
 
 
+          <!-- NOTE - TOPPINGS -->
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img
+                src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&w=800"
+                alt="Chocolate chips" class="card-img">
+              <div class="card-body">
+                <h5>Chocolate Chips</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$0.25</p>
+              <button onclick="orderItem(`Chocolate Chips`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
 
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="https://windycitybaker.com/wp-content/uploads/2020/06/Homemade_Sprinkles_22.jpg" alt="Sprinkles"
+                class="card-img">
+              <div class="card-body">
+                <h5>Sprinkles</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$0.25</p>
+              <button onclick="orderItem('Sprinkles')" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="https://m.media-amazon.com/images/I/61MrjiAJR8L._AC_UF894,1000_QL80_.jpg" alt="Cookie Dough"
+                class="card-img">
+              <div class="card-body">
+                <h5>Cookie Dough</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$0.50</p>
+              <button onclick="orderItem(`Cookie Dough`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="row g-3 m-3 justify-content-around">
+
+          <!-- NOTE - ICE CREAMS -->
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img
+                src="https://glutenfreeonashoestring.com/wp-content/uploads/2023/01/3-Ingredient-ice-cream-scoop-600x600-1.jpg"
+                alt="Vanilla Icecream" class="card-img">
+              <div class="card-body">
+                <h5>Vanilla Icecream</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$4.00</p>
+              <button onclick="orderItem(`Vanilla`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img
+                src="https://www.allrecipes.com/thmb/qU9RzlqCysXOoaH-urHNCCQLXLs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-56803-very-chocolate-ice-cream-Beauties-4x3-0343db03e550403aaab1a0d52cbef744.jpg"
+                alt="Chocolate Icecream" class="card-img">
+              <div class="card-body">
+                <h5>Chocolate Icecream</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$4.00</p>
+              <button onclick="orderItem(`Chocolate`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img
+                src="https://www.thespruceeats.com/thmb/kpuMkqk0BhGMTuSENf_IebbHu1s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-ice-cream-10-0b3e120e7d6f4df1be3c57c17699eb2c.jpg"
+                alt="strawberry Icecream" class="card-img">
+              <div class="card-body">
+                <h5>Strawberry</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$4.00</p>
+              <button onclick="orderItem(`Strawberry`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="row g-3 m-3 justify-content-around">
+
+          <!-- NOTE - CONES -->
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="https://cdnimg.webstaurantstore.com/images/products/large/48553/1913705.jpg" alt="Icecream Cone"
+                class="card-img">
+              <div class="card-body">
+                <h5>Regular Cone</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$1.00</p>
+              <button onclick="orderItem(`Cone`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="https://oishi.com.sg/wp-content/uploads/2023/08/Waffle-bowls.png" alt="Waffle Bowl"
+                class="card-img">
+              <div class="card-body">
+                <h5>Waffle Bowl</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$3.00</p>
+              <button onclick="orderItem(`Bowl`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img
+                src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3AtMjk2LWppci0xOTA1LW5hbS1qb2IxNDYyXzIuanBn.jpg"
+                alt="Large Cone" class="card-img">
+              <div class="card-body">
+                <h5>X-Large Cone</h5>
+              </div>
+              <p class="text-end fw-bold text-success p-3">$4.00</p>
+              <button onclick="orderItem(`Large Cone`)" class="btn btn-primary w-100">Add to Order</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </section>
-
   </main>
-
-
-
 
   <script src="app.js"></script>
 </body>
